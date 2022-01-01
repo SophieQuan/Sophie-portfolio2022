@@ -184,9 +184,9 @@ main{
 }
 .work img {
     width: 100%;
-    min-width: 400px;
+    min-width: 320px;
     height: 100%;
-    
+    margin: 0 auto;
 }
 .work-heading{
     position: absolute;
@@ -203,6 +203,9 @@ main{
 }
 
 /* CONTACT SECTION */
+#contact{
+    padding-bottom: 3%;
+}
 #contact ul{
     margin: 2%;
     font-size: 25px;
@@ -319,6 +322,9 @@ footer .logo{
     .main-section{
         width: 100%;
     }
+    .wrapper{
+        width: 100%;
+    }
     .work-wrapper{
         flex: 0 100%;
     }
@@ -346,6 +352,9 @@ footer .logo{
     #logo{
         font-size: 40px;
     }
+    .wrapper{
+        width: 100%;
+    }
     .col-80{
         flex: 0 100%;
     }
@@ -371,6 +380,15 @@ footer .logo{
     }
     .work-wrapper{
         flex: 0 100%;
+    }
+    footer{
+        font-size: 15px;
+    }
+    #contact ul{
+        font-size: 20px;
+    }
+    #contact{
+        padding-bottom: 5%;
     }
 }
 @media screen and (max-width: 320px){
