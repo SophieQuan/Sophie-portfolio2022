@@ -217,7 +217,14 @@ footer{
     text-align: center;
     color: var(--white);
 }
-
+footer strong{
+    color: var(--yellow);
+}
+footer .logo{
+    color: var(--white);
+    font-family: var(--nautigal);
+    font-size: 30px;
+}
 @media screen and (max-width: 980px){
     header nav ul li a{
         font-size: 23px;
