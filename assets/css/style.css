@@ -173,23 +173,30 @@ main{
 .work-wrapper{
     flex: 0 80%;
 }
+.work:hover{
+    border: 5px solid var(--mainGreen);
+    transition: all 0.2s ease-in-out;
+}
 .work{
     flex: 1 0 0;
     margin: 2%;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .work img {
     width: 100%;
     min-width: 400px;
+    height: 100%;
+    
 }
 .work-heading{
     position: absolute;
-    margin-top: -120px;
+    margin-top: -90px;
     display: flex;
     flex-direction: column;
     text-align: left;
     background-color: var(--mainGreen);
-    padding: 10px 20px;
+    padding: 5px 15px;
 }
 .work-heading h4{
     font-size: 25px;
