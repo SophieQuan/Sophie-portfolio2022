@@ -15,9 +15,6 @@ if (isset($_POST["submit"])) {
         } else {
             $subject = $_POST['sub'];
             $message = $_POST['msg'];
-            $headers = 'From:'.$email2;
-            $headers. = 'Cc:'.$email2;
-            "sophiequan7@gmail.com"; // Carbon copy to Sender
             // Message lines should not exceed 70 characters (PHP rule), so wrap it
             $message = wordwrap($message, 70);
             // Send Mail By PHP Mail Function
@@ -26,4 +23,4 @@ if (isset($_POST["submit"])) {
         }
     }
 }
->
+?>
