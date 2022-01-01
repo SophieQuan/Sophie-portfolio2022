@@ -1,7 +1,7 @@
 # Sophie Quan Portfolio 2022
 
 ## Purpose
-A portfolio of work showcases my skills and capabilities to employers looking to fill a full-time position
+A portfolio of work showcases my skills and capabilities
 
 ## Built With
 * HTML

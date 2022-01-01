@@ -1,0 +1,364 @@
+:root{
+    --mainGreen: #22BCAD;
+    --yellow: #ffff00;
+    --grey: #dddada;
+    --offwhite: #fafafa;
+    --white: #fff;
+    --open-sans: 'Open Sans', sans-serif;
+    --raleway: 'Raleway', sans-serif;;
+    --nautigal: 'The Nautigal', cursive;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+body{
+    /* background-color: var(--mainGreen); */
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+
+}
+a{
+    text-decoration: none;
+}
+/* Header */
+
+header{
+    background-color: var(--mainGreen);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    z-index: 8888;
+    position: fixed;
+    width: 100%;
+}
+#logo{
+    color: var(--yellow);
+    flex: 0 30%;
+    font-size: 3vw;
+    font-family: var(--nautigal);
+    padding-left: 1%;
+}
+header a span{
+    color: var(--white);
+}
+
+header nav{
+    flex: 0 70%;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 7px 0px;
+}
+header nav ul li{
+    transition: all 0.3s ease-in-out;
+}
+header nav ul li:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+header nav ul li a{
+    color: var(--offwhite);
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    color: var(--yellow);
+
+}
+header nav ul li a{
+    padding: 1vw 2vw;
+    font-size: 27px;
+}
+/* HERO */
+main{
+    width: 100%;
+
+    background-color: var(--white);
+}
+.wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.intro{
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+.intro h2{
+    font-family: var(--nautigal);
+    font-size: 5vw;
+    color: var(--white);
+}
+.intro p{
+    font-family: var(--open-sans);
+    font-size: 1.6vw;
+    color: var(--white);
+    padding: 2.5vh;
+    line-height: 1.7;
+    border-left: 5px solid var(--mainGreen);
+    margin-top: 2vh;
+}
+.intro span{
+    color: var(--yellow);
+}
+.hero-img{
+    background-image: url(../images/hero.jpeg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100%;
+}
+
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 80%;
+    margin: 0 auto; */
+    margin-bottom: 2%;
+    
+}
+#intro{
+    margin-top: 2%;
+}
+#intro .col-80{
+    flex-wrap: wrap;
+    padding: 2%;
+    font-size: 25px;
+}
+.col-80{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex: 0 80%;
+}
+.main-heading{
+    font-size: 40px;
+    height: auto;
+    border-right: 5px solid var(--mainGreen);
+    display: flex;
+    flex: 0 20%;
+    margin-top: 1%;
+    font-weight: 500;
+    text-align: center;
+    color: var(--mainGreen);
+}
+
+.work-wrapper{
+    flex: 0 80%;
+}
+.work{
+    flex: 1 0 0;
+    margin: 2%;
+    text-align: center;
+}
+.work img {
+    width: 100%;
+    min-width: 400px;
+}
+.work-heading{
+    position: absolute;
+    margin-top: -120px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--mainGreen);
+    padding: 10px 20px;
+}
+.work-heading h4{
+    font-size: 25px;
+    font-weight: 1000;
+}
+
+/* contact section */
+#contact ul{
+    margin: 2%;
+    font-size: 25px;
+}
+#contact a{
+    color: #000;
+}
+#contact a:hover{
+    color: var(--mainGreen);
+}
+footer{
+    height: 7vh;
+    background-color: var(--mainGreen);
+    font-size: 20px;
+    padding-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 980px){
+    header nav ul li a{
+        font-size: 23px;
+    }
+    .intro p{
+        font-size: 3.5vw;
+    }
+    .intro h2{
+        font-size: 10vw;
+    }
+    .hero-img {
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (max-width: 768px){
+    header nav ul{
+        padding: 0;
+    }
+    header nav ul li a{
+        font-size: 23px;
+    }
+    #logo{
+        font-size: 7vw;
+    }
+    header{
+        padding: 5px 10px;
+        align-items: center;
+    }
+    .main-heading{
+        font-size: 5vw;
+        flex: 0 100%;
+        margin: 2%;
+    }
+    .work-wrapper{
+        flex: 0 100%;
+    }
+    .main-heading{
+        border-right: none;
+        border-left: 5px solid var(--mainGreen);
+        padding-left: 10px;
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (max-width: 575px){
+    header{
+        padding: 1vw;
+    }
+    header nav{
+        flex: 0 100%
+    }
+    header nav ul{
+        justify-content: center;
+        margin: 0;
+    }
+    header nav ul li a{
+        /* padding: 5px 10px; */
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+    #logo{
+        flex: 0 100%;
+        text-align: center;
+    }
+    .col-80{
+        flex: 0 100%;
+    }
+    /* intro */
+    #hero{
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+    }
+    .intro{
+        height: 100vh;
+    }
+    .main-section{
+        width: 100%;
+    }
+    .work-wrapper{
+        flex: 0 100%;
+    }
+
+    /* about */
+    #intro .col-80{
+        font-size: 20px;
+    }
+    .main-heading{
+        border-right: none;
+        border-left: 5px solid var(--mainGreen);
+        padding-left: 10px;
+        font-size: 25px;
+    }
+    
+}
+
+@media screen and (max-width: 375px){
+    .intro p{
+        font-size: 5vw;
+    }
+    .intro h2{
+        font-size: 12vw;
+    }
+    #logo{
+        font-size: 40px;
+    }
+    .col-80{
+        flex: 0 100%;
+    }
+    .main-section{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .work img{
+        margin: 0;
+        margin-bottom: 2%;
+        min-width: 365px;
+        
+    }
+    .main-heading{
+        font-size: 30px;
+        flex: 0 35%;
+    }
+    .work-heading h4{
+        font-size: 20px;
+    }
+    .work-heading p{
+        font-size: 15px;
+    }
+    .work-wrapper{
+        flex: 0 100%;
+    }
+}
+@media screen and (max-width: 320px){
+    .work img{
+        margin: 0;
+        margin-bottom: 2%;
+        min-width: 310px;
+    }
+    .col-80{
+        flex: 0 100%;
+    }
+}
