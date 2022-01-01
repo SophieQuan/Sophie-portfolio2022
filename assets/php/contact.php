@@ -1,26 +1,56 @@
 <?php
-if (isset($_POST["submit"])) {
-   // Checking For Blank Fields..
-    if ($_POST["name"] == "" || $_POST["email"] == "" || $_POST["sub"] == "" || $_POST["msg"] == "") {
-        echo "Fill All Fields..";
-    } else {
-        // Check if the "Sender's Email" input field is filled out
-        $email = $_POST['email'];
-        // Sanitize E-mail Address
-        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-        // Validate E-mail Address
-        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        if (!$email) {
-            echo "Invalid Sender's Email";
-        } else {
-            $subject = $_POST['sub'];
-            $message = $_POST['msg'];
-            // Message lines should not exceed 70 characters (PHP rule), so wrap it
-            $message = wordwrap($message, 70);
-            // Send Mail By PHP Mail Function
-            mail("[email protected]", $subject, $message, $headers);
-            echo "Your mail has been sent successfuly ! Thank you for your feedback";
-        }
+  
+if($_POST) {
+    $visitor_name = "";
+    $visitor_email = "";
+    $email_title = "";
+    $concerned_department = "";
+    $visitor_message = "";
+    $email_body = "<div>";
+      
+    if(isset($_POST['visitor_name'])) {
+        $visitor_name = filter_var($_POST['visitor_name'], FILTER_SANITIZE_STRING);
+        $email_body .= "<div>
+                           <label><b>Visitor Name:</b></label>&nbsp;<span>".$visitor_name."</span>
+                        </div>";
     }
+ 
+    if(isset($_POST['visitor_email'])) {
+        $visitor_email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['visitor_email']);
+        $visitor_email = filter_var($visitor_email, FILTER_VALIDATE_EMAIL);
+        $email_body .= "<div>
+                           <label><b>Visitor Email:</b></label>&nbsp;<span>".$visitor_email."</span>
+                        </div>";
+    }
+      
+    if(isset($_POST['subject'])) {
+        $email_title = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+        $email_body .= "<div>
+                           <label><b>Reason For Contacting Us:</b></label>&nbsp;<span>".$sub."</span>
+                        </div>";
+    }
+      
+      
+    if(isset($_POST['visitor_message'])) {
+        $visitor_message = htmlspecialchars($_POST['visitor_message']);
+        $email_body .= "<div>
+                           <label><b>Visitor Message:</b></label>
+                           <div>".$visitor_message."</div>
+                        </div>";
+    }
+    $email_body .= "</div>";
+ 
+    $headers  = 'MIME-Version: 1.0' . "\r\n"
+    .'Content-type: text/html; charset=utf-8' . "\r\n"
+    .'From: ' . $visitor_email . "\r\n";
+      
+    if(mail($recipient, $sub, $email_body, $headers)) {
+        echo "<p>Thank you for contacting us, $visitor_name. You will get a reply within 24 hours.</p>";
+    } else {
+        echo '<p>We are sorry but the email did not go through.</p>';
+    }
+      
+} else {
+    echo '<p>Something went wrong</p>';
 }
 ?>
