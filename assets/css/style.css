@@ -443,6 +443,9 @@ footer .logo{
     #contact{
         padding-bottom: 5%;
     }
+    .main-section{
+        padding-top: 20%;
+    }
 }
 @media screen and (max-width: 320px){
     .work img{
