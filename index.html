@@ -117,40 +117,40 @@
             </section>
             <!-- contact -->
             <section id="contact" class="main-section">
-                <h3 class="main-heading">Contact Info</h3>
-                <ul>
-                    <li>
-                        <strong>Email: </strong><a href="mailto:sophiequan7@gmail.com" target="_blank">sophiequan7@gmail.com</a>
-                    </li>
-                    <li>
-                        <strong>Github: </strong>
-                        <a href="https://github.com/SophieQuan" target="_blank">Link to Repo!</a>
-                    </li>
-                    <li>
-                        <strong>Portfolio: </strong>
-                        <a href="https://sophiequan.github.io/portfolio2022/" target="_blank">My Portfolio</a>
-                    </li>
-                </ul>
-                
-<form action="contact.php" method="post">
-  <div class="elem-group">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
-  </div>
-  <div class="elem-group">
-    <label for="email">Your E-mail</label>
-    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
-  </div>
-  <div class="elem-group">
-    <label for="sub">Subject</label>
-    <input type="text" id="sub" name="subject" placeholder="subject" required>
-  </div>
-  <div class="elem-group">
-    <label for="message">Write your message</label>
-    <textarea id="message" name="visitor_message" placeholder="Say whatever you want." required></textarea>
-  </div>
-  <button type="submit">Send Message</button>
-</form>
+                <h3 class="main-heading">Contact</h3>
+                <div class="contact-info">
+                    <ul>
+                        <li>
+                            <strong>Email: </strong><a href="mailto:sophiequan7@gmail.com" target="_blank">sophiequan7@gmail.com</a>
+                        </li>
+                        <li>
+                            <strong>Github: </strong>
+                            <a href="https://github.com/SophieQuan" target="_blank">Link to Repo!</a>
+                        </li>
+                        <li>
+                            <strong>Portfolio: </strong>
+                            <a href="https://sophiequan.github.io/portfolio2022/" target="_blank">My Portfolio</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <form action="contact.php" method="post">
+                        <h3>Get In Touch</h3>
+                        <div class="elem-group">
+                            <input type="text" id="name" name="visitor_name" placeholder="Your Name*" pattern=[A-Z\sa-z]{3,20} required>
+                        </div>
+                        <div class="elem-group">
+                            <input type="email" id="email" name="visitor_email" placeholder="YourEmail@email.com* " required>
+                        </div>
+                        <div class="elem-group">
+                            <input type="text" id="sub" name="subject" placeholder="Subject*" required>
+                        </div>
+                        <div class="elem-group">
+                            <textarea id="message" name="visitor_message" placeholder="Write Your Message*" required></textarea>
+                        </div>
+                        *Required<br><br>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
             </section>
         </section>
     </main>
