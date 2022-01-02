@@ -106,7 +106,7 @@ header nav ul li a:hover{
     color: var(--yellow);
 }
 .hero-img{
-    background-image: url(../images/hero.jpeg);
+    background-image: url(../images/book-store.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
