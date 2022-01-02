@@ -50,11 +50,9 @@ header{
 header a span{
     color: var(--white);
 }
-
 header nav{
     flex: 0 70%;
 }
-
 header nav ul{
     display: flex;
     flex-direction: row;
@@ -73,16 +71,13 @@ header nav ul li:hover{
 header nav ul li a{
     color: var(--offwhite);
     text-decoration: none;
-}
-
-header nav ul li a:hover{
-    color: var(--yellow);
-
-}
-header nav ul li a{
     padding: 1vw 2vw;
     font-size: 27px;
 }
+header nav ul li a:hover{
+    color: var(--yellow);
+}
+
 /* HERO */
 .intro{
     z-index: 1;
@@ -92,7 +87,6 @@ header nav ul li a{
     width: 80%;
     justify-content: center;
     margin: 0 auto;
-
 }
 .intro h2{
     font-family: var(--nautigal);
@@ -127,6 +121,7 @@ header nav ul li a{
     height: 100vh;
     width: 100%;
 }
+
 /* MAIN BODY */
 main{
     width: 100%;
@@ -143,11 +138,19 @@ main{
 .main-section{
     display: flex;
     flex-wrap: wrap;
-    /* width: 80%;
-    margin: 0 auto; */
     margin-bottom: 2%;
     padding-top: 5%;
-    
+}
+.main-heading{
+    font-size: 40px;
+    height: auto;
+    border-right: 5px solid var(--mainGreen);
+    display: flex;
+    flex: 0 20%;
+    margin-top: 1%;
+    font-weight: 500;
+    text-align: center;
+    color: var(--mainGreen);
 }
 #intro{
     margin-top: 2%;
@@ -162,30 +165,20 @@ main{
     flex-wrap: wrap-reverse;
     flex: 0 80%;
 }
-.main-heading{
-    font-size: 40px;
-    height: auto;
-    border-right: 5px solid var(--mainGreen);
-    display: flex;
-    flex: 0 20%;
-    margin-top: 1%;
-    font-weight: 500;
-    text-align: center;
-    color: var(--mainGreen);
-}
+
 /* WORK SECTION */
 .work-wrapper{
     flex: 0 80%;
-}
-.work:hover{
-    border: 5px solid var(--mainGreen);
-    transition: all 0.2s ease-in-out;
 }
 .work{
     flex: 1 0 0;
     margin: 2%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
+}
+.work:hover{
+    border: 5px solid var(--mainGreen);
+    transition: all 0.2s ease-in-out;
 }
 .work img {
     width: 100%;
@@ -259,7 +252,7 @@ textarea {
 button {
     height: 50px;
     background: var(--mainGreen);
-    color: white;
+    color: var(--white);
     font-size: 1.25em;
     font-family: var(--open-sans);
     border-radius: 4px;
@@ -267,10 +260,10 @@ button {
     border: none;
     padding: 2px 10px;
 }
-
 button:hover {
     background: rgb(13, 218, 197);
 }
+
 /* MEDIUM SCREENS */
 @media screen and (max-width: 980px){
     header nav ul li a{
@@ -364,6 +357,10 @@ footer .logo{
     .col-80{
         flex: 0 100%;
     }
+    /* about */
+    #intro .col-80{
+        font-size: 20px;
+    }
     /* intro */
     #hero{
         width: 100%;
@@ -383,10 +380,6 @@ footer .logo{
         flex: 0 100%;
     }
 
-    /* about */
-    #intro .col-80{
-        font-size: 20px;
-    }
     .main-heading{
         border-right: none;
         border-left: 5px solid var(--mainGreen);
@@ -414,16 +407,16 @@ footer .logo{
     .main-section{
         width: 100%;
         margin: 0 auto;
+        padding-top: 20%;
+    }
+    .main-heading{
+        font-size: 30px;
+        flex: 0 100%;
     }
     .work img{
         margin: 0;
         margin-bottom: 2%;
         min-width: 365px;
-        
-    }
-    .main-heading{
-        font-size: 30px;
-        flex: 0 100%;
     }
     .work-heading h4{
         font-size: 20px;
@@ -434,17 +427,14 @@ footer .logo{
     .work-wrapper{
         flex: 0 100%;
     }
-    footer{
-        font-size: 15px;
-    }
     #contact ul{
         font-size: 20px;
     }
     #contact{
         padding-bottom: 5%;
     }
-    .main-section{
-        padding-top: 20%;
+    footer{
+        font-size: 15px;
     }
 }
 @media screen and (max-width: 320px){
