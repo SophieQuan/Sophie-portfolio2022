@@ -113,6 +113,7 @@ header nav ul li a:hover{
     position: fixed;
     top: 0;
     left: 0;
+    background-position: center;
     width: 100%;
     z-index: -1;
 }
@@ -330,6 +331,9 @@ footer .logo{
     }
     .main-section{
         padding-top: 13%;
+    }
+    form h3{
+        font-size: 20px;
     }
 }
 
