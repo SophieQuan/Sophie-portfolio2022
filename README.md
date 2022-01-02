@@ -15,5 +15,3 @@ https://github.com/SophieQuan/portfolio2022.git
 
 ## Screenshot
 ![screen shot of sophie quan's portfolip webpage](assets/images/screenshot-portfolio-2022.png?raw=true "Optional Title")
-
-## Contribution
