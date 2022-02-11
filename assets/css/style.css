@@ -163,7 +163,7 @@ main{
 }
 .col-80{
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     flex: 0 80%;
 }
 
