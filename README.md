@@ -8,10 +8,10 @@ A portfolio of work showcases my prervious works, my skills and capabilities
 * CSS
 
 ## Website
-https://sophiequan.github.io/Sophie-portfolio2022/
+https://sophiequan.github.io/sophie-portfolio2022/
 
 ## Github Repository URL
-https://github.com/SophieQuan/Sophie-portfolio2022.git
+https://github.com/SophieQuan/sophie-portfolio2022.git
 
 ## Screenshot
 ![screen shot of sophie quan's portfolip webpage](assets/images/screenshot-portfolio-2022.png?raw=true "Optional Title")
